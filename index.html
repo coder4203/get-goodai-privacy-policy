@@ -5,70 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GetGood Privacy Policy</title>
   <style>
+    :root {
+      --bg: #0c0c0c;
+      --card: #121212;
+      --text: #dcdcdc;
+      --accent: #00ff6a;
+      --accent-dim: rgba(0, 255, 106, 0.15);
+    }
+
     body {
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      background-color: #0d0d0d;
-      color: #e5e5e5;
-      line-height: 1.8;
+      background: var(--bg);
+      color: var(--text);
       margin: 0;
       padding: 0;
+      line-height: 1.75;
     }
 
     header {
-      background: #000;
-      color: #00ff6a;
+      background: linear-gradient(to right, #000, #0f3d1f);
+      color: var(--accent);
+      padding: 3rem 1rem;
       text-align: center;
-      padding: 2rem 1rem;
-      font-size: 1.9rem;
-      font-weight: 700;
-      letter-spacing: 1px;
+      font-size: 2.3rem;
+      font-weight: 800;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
+      box-shadow: 0 0 40px var(--accent-dim);
     }
 
     main {
-      max-width: 950px;
+      max-width: 900px;
+      background: var(--card);
       margin: 3rem auto;
-      background: #121212;
-      padding: 2.5rem 3rem;
-      border-radius: 14px;
-      box-shadow: 0 0 25px rgba(0, 255, 106, 0.15);
-    }
-
-    h1, h2 {
-      color: #00ff6a;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: 0 0 25px var(--accent-dim);
+      border: 1px solid rgba(0, 255, 106, 0.10);
     }
 
     h2 {
-      border-left: 4px solid #00ff6a;
-      padding-left: 10px;
-      margin-top: 2.5rem;
-      font-size: 1.4rem;
+      color: var(--accent);
+      margin-top: 2.8rem;
+      font-size: 1.55rem;
+      font-weight: 700;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
     }
 
-    p {
-      margin: 1rem 0;
+    p, li {
+      font-size: 1.04rem;
     }
 
     ul {
       margin: 1rem 0;
-      padding-left: 1.5rem;
+      padding-left: 1.3rem;
     }
 
     strong {
-      color: #00ff6a;
+      color: var(--accent);
+      font-weight: 600;
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
+      color: #aaa;
       font-size: 0.9rem;
-      color: #888;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    /* Section dividers */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(0, 255, 106, 0.10);
+      margin: 3rem 0;
     }
 
     @media (max-width: 700px) {
       main {
-        padding: 1.5rem;
+        padding: 1.7rem;
       }
+      header { font-size: 1.8rem; }
+      h2 { font-size: 1.3rem; }
     }
   </style>
 </head>
@@ -82,91 +102,106 @@
     <h2>1. Interpretations and Definitions</h2>
     <p><strong>Interpretation</strong> Words with capitalized initials have specific meanings defined below. The same definitions apply whether they appear in singular or plural form.</p>
     <p><strong>Definitions</strong></p>
-    <p>Application (App): Refers to GetGood, the mobile application operated by us.<br>
-    Company (We, Us, Our): Refers to GetGood by Yusuf Rana.<br>
-    Account: A unique user profile created to access or use the App’s features.<br>
-    Personal Data: Any information that identifies, relates to, or can reasonably be linked to an individual.<br>
-    Usage Data: Information automatically collected during App use, such as interactions, performance metrics, and device information.<br>
-    Device: Any device capable of accessing the App, such as a smartphone or tablet.<br>
-    Service Providers: Independent entities contracted to support the App’s functions (e.g., analytics, hosting, authentication, or payments).<br>
-    You (User): The individual accessing or using the App.</p>
+    <p>
+      Application (App): Refers to GetGood.<br>
+      Company (We, Us, Our): Refers to GetGood by Yusuf Rana.<br>
+      Account: A unique user profile created to access the App.<br>
+      Personal Data: Any identifiable information.<br>
+      Usage Data: Automatically collected analytics and performance information.<br>
+      Device: Any device capable of accessing the App.<br>
+      Service Providers: Third-party companies supporting the App.<br>
+      You: The individual using the App.
+    </p>
+
+    <div class="divider"></div>
 
     <h2>2. Collecting and Using Your Personal Data</h2>
-    <h3>2.1 Types of Data Collected</h3>
+    <h3 style="color: var(--accent); margin-top: 1.5rem;">2.1 Types of Data Collected</h3>
+
     <p><strong>Personal Data</strong> We may collect the following information:</p>
     <ul>
-      <li><strong>Account Information</strong> – Email address and authentication credentials for login or sign-in.</li>
-      <li><strong>Profile Details</strong> – Display name, age range, gender, or fitness goals (if voluntarily provided).</li>
-      <li><strong>Fitness and Performance Data</strong> – Workouts, measurements, or progress data you manually record.</li>
-      <li><strong>Communication Data</strong> – Messages or feedback you send through in-app forms or email.</li>
+      <li><strong>Account Information</strong> – Email & authentication data.</li>
+      <li><strong>Profile Details</strong> – Display name, age range, goals (optional).</li>
+      <li><strong>Fitness Data</strong> – Manually logged workouts & progress.</li>
+      <li><strong>Communication Data</strong> – Messages or support requests.</li>
     </ul>
 
-    <p><strong>Usage Data</strong> Collected automatically when you interact with the App. This may include:</p>
+    <p><strong>Usage Data</strong> includes:</p>
     <ul>
-      <li>Device type, operating-system version, and unique identifiers.</li>
-      <li>App interaction metrics (screen views, session duration, button taps).</li>
-      <li>Crash logs, error diagnostics, and performance data.</li>
-      <li>Approximate location data (city or region) for analytic purposes.</li>
+      <li>Device type & OS</li>
+      <li>Interaction metrics</li>
+      <li>Crash logs & diagnostics</li>
+      <li>Approximate region-based location</li>
     </ul>
 
-    <p><strong>Exercise Data</strong> When you log or track workouts, we store those entries securely under your account so that you can review progress, view analytics, and receive insights.</p>
+    <p><strong>Payment Data</strong> is handled entirely by app-store billing systems. We never store payment card details.</p>
 
-    <p><strong>Payment Data</strong> Payments for subscriptions or upgrades are processed exclusively through official app-store billing systems (such as Apple App Store or Google Play Billing). We do not collect or store your credit-card or banking details. Only anonymized transaction confirmations (e.g., subscription status) are stored to verify premium access.</p>
+    <div class="divider"></div>
 
     <h2>3. Use of Your Personal Data</h2>
-    <p>We may use your Personal Data to:</p>
     <ul>
-      <li>Operate and maintain the App’s features and functionality.</li>
-      <li>Authenticate users and manage secure account access.</li>
-      <li>Provide personalized recommendations based on your fitness data and goals.</li>
-      <li>Send administrative communications, including security alerts, policy updates, or account-related messages.</li>
-      <li>Analyze user behavior and technical performance to enhance reliability and design.</li>
-      <li>Enforce our Terms and Conditions and protect against misuse.</li>
-      <li>Comply with legal obligations and regulatory requirements.</li>
+      <li>Operate and improve App features.</li>
+      <li>Secure authentication & account access.</li>
+      <li>Personalized fitness recommendations.</li>
+      <li>Administrative notifications.</li>
+      <li>Analytics & reliability improvements.</li>
+      <li>Terms enforcement & fraud protection.</li>
     </ul>
-    <p>We never sell or rent your Personal Data to third parties.</p>
+    <p><strong>We do not sell your Personal Data.</strong></p>
+
+    <div class="divider"></div>
 
     <h2>4. Retention of Your Personal Data</h2>
-    <p>We retain your Personal Data only for as long as needed to:</p>
-    <ul>
-      <li>Maintain your account, provide requested services, and meet legal obligations.</li>
-      <li>Resolve disputes, troubleshoot issues, and enforce agreements.</li>
-    </ul>
-    <p>When data is no longer required, it is securely deleted or anonymized. Backup copies may persist temporarily for system integrity or legal compliance.</p>
+    <p>Your Personal Data is retained only as long as necessary for account functionality, legal compliance, and security. When no longer needed, it is deleted or anonymized.</p>
+
+    <div class="divider"></div>
 
     <h2>5. Transfer of Your Personal Data</h2>
-    <p>Your information may be processed and stored on servers located in other regions or countries. We take reasonable steps to ensure that transfers occur under strong protection standards, such as encryption, secure transport protocols (HTTPS/TLS), and restricted access controls. By using the App, you consent to such transfers consistent with this Policy.</p>
+    <p>Your data may be processed on servers outside your region. We protect your data using encryption, restricted access, and secure protocols.</p>
+
+    <div class="divider"></div>
 
     <h2>6. Delete Your Personal Data</h2>
-    <p>You can delete your account and all associated data directly within the App at any time by tapping the “Delete Account” option in your profile or settings menu. When you confirm deletion: Your account and all stored data — including workout history, progress logs, and personal details — are permanently erased from our active systems. Certain minimal records (for example, transaction confirmations required by app-store billing systems or legal compliance) may be retained securely for a limited period before automatic removal. Once deletion is complete, your data cannot be recovered, even if you reinstall or sign up again using the same email address. If you experience any issues using the in-app deletion feature, you may also contact (notyet) for manual verification and removal.</p>
+    <p>You may delete your account anytime by using the “Delete Account” option inside the App. All associated data is permanently erased. Some transaction records may temporarily remain for legal compliance.</p>
+
+    <div class="divider"></div>
 
     <h2>7. Disclosure of Your Personal Data</h2>
-    <p><strong>Business Transactions</strong> In the event of a merger, acquisition, restructuring, or asset sale, your Personal Data may be transferred as part of that process. You will be notified before any material changes occur.</p>
-    <p><strong>Law Enforcement</strong> We may disclose your information when legally required to respond to a court order, subpoena, or lawful government request.</p>
-    <p><strong>Other Legal Requirements</strong> We may also share information in good faith when necessary to: Fulfill legal or contractual obligations. Protect and defend our rights, intellectual property, or safety. Investigate potential violations, fraud, or security incidents. Protect users or the public from harm.</p>
+    <p><strong>Business Transactions:</strong> Data may transfer during mergers or acquisitions.</p>
+    <p><strong>Law Enforcement:</strong> We may disclose data when legally required.</p>
+
+    <div class="divider"></div>
 
     <h2>8. Security of Your Personal Data</h2>
-    <p>We employ technical and organizational safeguards, including:</p>
     <ul>
-      <li>Secure encryption during transmission and storage.</li>
-      <li>Authentication checks and limited-access credentials for internal systems.</li>
-      <li>Regular security testing and monitoring.</li>
+      <li>Encryption during transfer & storage</li>
+      <li>Restricted internal access</li>
+      <li>Regular security reviews</li>
     </ul>
-    <p>Despite these precautions, no digital platform can guarantee absolute security. Use the App with an understanding of these inherent limitations.</p>
+
+    <div class="divider"></div>
 
     <h2>9. Children’s Privacy</h2>
-    <p>Our App is not intended for individuals under 13 years of age (or the minimum digital-consent age in your jurisdiction). We do not knowingly collect or store information from children. If you believe a child has submitted data, please contact us for prompt removal.</p>
+    <p>GetGood is not intended for users under 16 years of age.</p>
+
+    <div class="divider"></div>
 
     <h2>10. Links to Other Websites</h2>
-    <p>The App may contain links, redirects, or integrations that connect to external platforms. We are not responsible for the privacy or security practices of those external services. We encourage you to review their privacy policies before interacting with them.</p>
+    <p>External links within the App are not under our control. Users should review third-party privacy policies.</p>
+
+    <div class="divider"></div>
 
     <h2>11. Changes to This Privacy Policy</h2>
-    <p>We may revise this Privacy Policy periodically. Updates will be posted within the App, with the “Last Updated” date reflecting the latest revision. Continued use of the App after changes take effect constitutes acceptance of the revised terms.</p>
+    <p>Updates will be posted within the App. Continued use after changes indicates acceptance.</p>
+
+    <div class="divider"></div>
 
     <h2>12. Contact Us</h2>
-    <p>For any privacy-related questions, data-access requests, or account-deletion inquiries, please contact us: (still have to create an email)</p>
+    <p>For privacy questions or data requests, contact: <strong>support@getgoodapp.com</strong></p>
+
   </main>
 
   <footer>© 2025 GetGood by Yusuf Rana — All rights reserved.</footer>
 </body>
 </html>
+
