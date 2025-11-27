@@ -1,763 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GetGood Privacy Policy</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GetGood Privacy Policy</title>
+    <style>
+        /* CSS Reset and Variables */
+        :root {
+            --color-primary: #1e3a8a; /* Deep Corporate Blue */
+            --color-secondary: #f3f4f6; /* Light Gray Background */
+            --color-background: #ffffff; /* White Content Card */
+            --color-text: #1f2937; /* Dark Gray Text */
+            --color-light-text: #4b5563; /* Medium Gray Text */
+            --color-border: #e5e7eb; /* Light Border Color */
+            --color-link: #10b981; /* Accent Color (Teal/Green) */
+            --font-family-body: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+        }
 
-  <!-- Professional font stack -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        /* Applying a more formal font stack */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
-  <style>
-    :root {
-      --bg: #050608;
-      --bg-alt: #050608;
-      --card: #0c0f15;
-      --card-soft: #11141c;
-      --border-subtle: rgba(255, 255, 255, 0.06);
-      --border-strong: rgba(0, 255, 106, 0.18);
-      --text: #e4e7ec;
-      --muted: #9ca3af;
-      --accent: #00ff6a;
-      --accent-soft: rgba(0, 255, 106, 0.14);
-      --accent-strong: #22ff84;
-      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.85);
-      --radius-lg: 18px;
-      --radius-xl: 24px;
-      --max-width: 1040px;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    * {
-      box-sizing: border-box;
-    }
+        body {
+            font-family: var(--font-family-body);
+            background: var(--color-secondary);
+            color: var(--color-text);
+            line-height: 1.65;
+            min-height: 100vh;
+        }
 
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(0, 255, 106, 0.16), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.12), transparent 50%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-    }
+        /* --- Layout: Corporate Document Style --- */
+        .container {
+            display: flex;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    .page {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 1.5rem 1.5rem 3rem;
-    }
+        /* Header: Clean and professional banner */
+        header {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            padding: 30px 0;
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+        
+        /* Sticky Navigation (Left Sidebar) */
+        .nav-sidebar {
+            width: 280px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 40px; /* Offset from the top */
+            height: fit-content;
+            margin-top: 40px;
+            padding-right: 30px;
+        }
 
-    /* Top navigation / brand bar */
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 1.25rem;
-      margin-bottom: 1.5rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.25);
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.8));
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.7);
-      backdrop-filter: blur(18px);
-      position: sticky;
-      top: 1rem;
-      z-index: 20;
-    }
+        .nav-sidebar h3 {
+            font-size: 1.1rem;
+            color: var(--color-light-text);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--color-border);
+        }
 
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-    }
+        .nav-sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
 
-    .nav-logo {
-      width: 32px;
-      height: 32px;
-      border-radius: 10px;
-      background: radial-gradient(circle at 30% 20%, #ffffff, #bbf7d0 30%, #22c55e 52%, #16a34a 70%, #166534 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.9), 0 10px 25px rgba(34, 197, 94, 0.65);
-    }
+        .nav-sidebar li {
+            margin-bottom: 8px;
+        }
 
-    .nav-logo-mark {
-      width: 18px;
-      height: 18px;
-      border-radius: 5px;
-      border: 2px solid #022c22;
-      background: rgba(15, 23, 42, 0.9);
-      box-shadow: inset 0 0 0 1px rgba(34, 197, 94, 0.55);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.65rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: #bbf7d0;
-      letter-spacing: 0.06em;
-    }
+        .nav-sidebar a {
+            display: block;
+            text-decoration: none;
+            color: var(--color-light-text);
+            font-size: 0.95rem;
+            padding: 5px 0;
+            transition: color 0.2s, padding-left 0.2s;
+        }
 
-    .nav-title {
-      display: flex;
-      flex-direction: column;
-      gap: 0.1rem;
-    }
+        .nav-sidebar a:hover, .nav-sidebar a.active {
+            color: var(--color-primary);
+            font-weight: 600;
+            padding-left: 5px;
+            border-left: 3px solid var(--color-link);
+        }
 
-    .nav-title-main {
-      font-size: 0.96rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #e5e7eb;
-    }
+        /* Main Content Area */
+        .content-main {
+            flex-grow: 1;
+            background: var(--color-background);
+            padding: 40px 50px;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+            margin: 20px 0 60px 0;
+        }
 
-    .nav-title-sub {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
+        /* --- Typography and Elements --- */
+        h1 { font-size: 2.2rem; color: var(--color-primary); margin-bottom: 10px; }
+        
+        /* Section Titles - Clean and Structured */
+        h2 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-top: 45px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--color-border);
+        }
 
-    .nav-pill {
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      font-size: 0.75rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      color: var(--muted);
-      background: radial-gradient(circle at top left, rgba(0, 255, 106, 0.08), transparent 55%);
-    }
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
 
-    .nav-pill-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.3);
-    }
+        p, ul, ol {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: var(--color-light-text);
+        }
 
-    /* Hero section */
-    .hero {
-      margin-top: 2.3rem;
-      margin-bottom: 2.5rem;
-      display: grid;
-      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.1fr);
-      gap: 2.1rem;
-      align-items: center;
-    }
+        ul, ol {
+            padding-left: 30px;
+        }
 
-    .hero-main-title {
-      font-size: clamp(2.1rem, 3vw, 2.7rem);
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #f9fafb;
-      margin-bottom: 0.75rem;
-    }
+        li {
+            margin-bottom: 8px;
+        }
 
-    .hero-accent-bar {
-      width: 64px;
-      height: 3px;
-      border-radius: 999px;
-      background: linear-gradient(to right, var(--accent), #22c55e, #4ade80);
-      margin-bottom: 0.9rem;
-    }
+        strong {
+            color: var(--color-text);
+            font-weight: 600;
+        }
 
-    .hero-subtitle {
-      font-size: 0.98rem;
-      max-width: 520px;
-      color: var(--muted);
-    }
+        .last-updated {
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--color-light-text);
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 15px;
+        }
 
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      margin-top: 1.35rem;
-    }
+        .contact-info {
+            padding: 20px;
+            background: var(--color-secondary);
+            border-left: 5px solid var(--color-link);
+            margin-top: 30px;
+        }
+        
+        .contact-info strong { color: var(--color-primary); }
 
-    .badge-pill {
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #e5e7eb;
-      background: radial-gradient(circle at top left, rgba(0, 255, 106, 0.12), transparent 60%);
-    }
+        /* Footer: Subtle and professional */
+        footer {
+            text-align: center;
+            padding: 30px 1rem;
+            color: var(--color-light-text);
+            font-size: 0.9rem;
+            background-color: #eef1f6;
+            border-top: 1px solid var(--color-border);
+        }
 
-    .badge-pill span {
-      color: var(--accent-strong);
-      font-weight: 600;
-    }
+        /* --- Responsiveness for Mobile/Tablet --- */
+        @media (max-width: 1024px) {
+            .nav-sidebar {
+                display: none; /* Hide sidebar on smaller screens */
+            }
+            .container {
+                padding: 0 10px;
+            }
+            .content-main {
+                margin: 20px auto 60px auto;
+                padding: 30px 20px;
+            }
+            header {
+                font-size: 1.8rem;
+                padding: 20px 0;
+            }
+            h2 { font-size: 1.5rem; }
+            h3 { font-size: 1.1rem; }
+        }
 
-    .hero-card {
-      border-radius: var(--radius-xl);
-      padding: 1.4rem 1.4rem 1.15rem;
-      border: 1px solid var(--border-strong);
-      background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(10, 16, 30, 0.96));
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background:
-        radial-gradient(circle at 10% 0%, rgba(0, 255, 106, 0.18), transparent 55%),
-        radial-gradient(circle at 90% 100%, rgba(56, 189, 248, 0.16), transparent 55%);
-      opacity: 0.68;
-      z-index: -1;
-    }
-
-    .hero-card-label {
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: rgba(148, 163, 184, 0.9);
-      margin-bottom: 0.6rem;
-    }
-
-    .meta-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.92);
-      border: 1px solid rgba(148, 163, 184, 0.55);
-    }
-
-    .chip-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
-    }
-
-    .hero-card-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 0.9rem;
-      padding-top: 0.75rem;
-      border-top: 1px dashed rgba(148, 163, 184, 0.4);
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    .hero-mark {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.78rem;
-      color: #9ca3af;
-    }
-
-    .hero-mark-icon {
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.7rem;
-      color: var(--accent-strong);
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    /* Content layout */
-    .content-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 3fr);
-      gap: 2rem;
-      align-items: flex-start;
-    }
-
-    /* Sidebar / TOC */
-    .toc-card {
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-subtle);
-      background: rgba(15, 23, 42, 0.94);
-      padding: 1.2rem 1.1rem;
-      box-shadow: 0 14px 36px rgba(15, 23, 42, 0.85);
-      position: sticky;
-      top: 5.5rem;
-    }
-
-    .toc-title {
-      font-size: 0.86rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: rgba(148, 163, 184, 0.95);
-      margin-bottom: 0.45rem;
-    }
-
-    .toc-subtitle {
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-bottom: 0.8rem;
-    }
-
-    .toc-list {
-      list-style: none;
-      padding: 0;
-      margin: 0.25rem 0 0.3rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-    }
-
-    .toc-item {
-      font-size: 0.8rem;
-    }
-
-    .toc-item a {
-      display: block;
-      padding: 0.4rem 0.55rem;
-      border-radius: 999px;
-      text-decoration: none;
-      color: #e5e7eb;
-      border: 1px solid transparent;
-      transition: background 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
-    }
-
-    .toc-item a span {
-      color: var(--muted);
-    }
-
-    .toc-item a:hover {
-      background: rgba(15, 23, 42, 0.95);
-      border-color: rgba(148, 163, 184, 0.6);
-      transform: translateY(-1px);
-    }
-
-    .toc-footer {
-      border-top: 1px dashed rgba(75, 85, 99, 0.6);
-      margin-top: 0.65rem;
-      padding-top: 0.65rem;
-      font-size: 0.76rem;
-      color: var(--muted);
-    }
-
-    .toc-footer span {
-      color: var(--accent-strong);
-      font-weight: 500;
-    }
-
-    /* Policy card */
-    .policy-card {
-      border-radius: var(--radius-xl);
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.98), rgba(2, 6, 23, 0.98));
-      padding: 2.2rem 2.1rem 2.3rem;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .policy-top-meta {
-      display: flex;
-      justify-content: space-between;
-      gap: 1.3rem;
-      align-items: baseline;
-      margin-bottom: 0.85rem;
-      font-size: 0.83rem;
-      color: var(--muted);
-    }
-
-    .policy-top-meta strong {
-      color: var(--accent-strong);
-      font-weight: 600;
-    }
-
-    .policy-top-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.35rem 0.8rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.55);
-      background: radial-gradient(circle at top left, rgba(0, 255, 106, 0.16), transparent 55%);
-      font-size: 0.75rem;
-      color: #e5e7eb;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .policy-top-badge-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
-    }
-
-    .policy-body {
-      margin-top: 0.75rem;
-      font-size: 0.97rem;
-    }
-
-    .policy-body h2 {
-      color: #f9fafb;
-      margin-top: 2.4rem;
-      margin-bottom: 0.75rem;
-      font-size: 1.3rem;
-      font-weight: 700;
-      padding-left: 0.85rem;
-      border-left: 3px solid var(--accent);
-    }
-
-    .policy-body h3 {
-      font-size: 1.02rem;
-      font-weight: 600;
-      margin-top: 1.5rem;
-      margin-bottom: 0.3rem;
-      color: #e5e7eb;
-    }
-
-    .policy-body p {
-      margin: 0.35rem 0 0.6rem;
-      color: var(--text);
-    }
-
-    .policy-body ul {
-      margin: 0.35rem 0 0.9rem 1.25rem;
-      padding-left: 0.9rem;
-    }
-
-    .policy-body li {
-      margin-bottom: 0.3rem;
-      color: var(--text);
-    }
-
-    .policy-body strong {
-      color: var(--accent-strong);
-      font-weight: 600;
-    }
-
-    .divider {
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(to right, transparent, rgba(148, 163, 184, 0.45), transparent);
-      margin: 2.2rem 0;
-      opacity: 0.9;
-    }
-
-    footer {
-      max-width: var(--max-width);
-      margin: 2rem auto 0;
-      padding: 1.4rem 1.5rem 2.4rem;
-      border-top: 1px solid rgba(31, 41, 55, 0.9);
-      font-size: 0.82rem;
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    footer span {
-      opacity: 0.95;
-    }
-
-    footer .footer-right {
-      opacity: 0.9;
-    }
-
-    footer .footer-right strong {
-      color: #e5e7eb;
-      font-weight: 500;
-    }
-
-    /* Responsive */
-    @media (max-width: 960px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .hero-card {
-        order: -1;
-      }
-      .content-layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .toc-card {
-        position: static;
-        margin-bottom: 1.25rem;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .page {
-        padding: 1.1rem 1.1rem 2.5rem;
-      }
-      .nav {
-        padding-inline: 0.95rem;
-        border-radius: 16px;
-      }
-      .hero {
-        margin-top: 1.8rem;
-        margin-bottom: 2rem;
-      }
-      .policy-card {
-        padding: 1.6rem 1.35rem 1.9rem;
-      }
-      .policy-body h2 {
-        margin-top: 2rem;
-      }
-      footer {
-        padding-inline: 1.1rem;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .nav-title-sub {
-        display: none;
-      }
-      .meta-row {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+    </style>
 </head>
 
 <body>
-  <div class="page">
-    <!-- Top nav -->
-    <header class="nav">
-      <div class="nav-left">
-        <div class="nav-logo">
-          <div class="nav-logo-mark">GG</div>
-        </div>
-        <div class="nav-title">
-          <div class="nav-title-main">GetGood</div>
-          <div class="nav-title-sub">AI-Powered Fitness & Nutrition Platform</div>
-        </div>
-      </div>
-      <div class="nav-pill">
-        <div class="nav-pill-dot"></div>
-        Privacy & Data Protection
-      </div>
+    <header>
+        GetGood Official Privacy Policy
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div>
-        <div class="hero-accent-bar"></div>
-        <h1 class="hero-main-title">Privacy Policy</h1>
-        <p class="hero-subtitle">
-          This Privacy Policy explains how GetGood collects, uses, and protects your information
-          when you use our application and related services.
-        </p>
-        <div class="hero-badges">
-          <div class="badge-pill">Scope: <span>Global Users</span></div>
-          <div class="badge-pill">Platform: <span>Mobile Application</span></div>
-        </div>
-      </div>
+    <div class="container">
+        <nav class="nav-sidebar">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#section-1">1. Definitions</a></li>
+                <li><a href="#section-2">2. Data Collection</a></li>
+                <li><a href="#section-3">3. Use of Data</a></li>
+                <li><a href="#section-4">4. Data Retention</a></li>
+                <li><a href="#section-5">5. Data Transfer</a></li>
+                <li><a href="#section-6">6. Your Rights</a></li>
+                <li><a href="#section-7">7. Disclosure</a></li>
+                <li><a href="#section-8">8. Data Security</a></li>
+                <li><a href="#section-9">9. Children’s Privacy</a></li>
+                <li><a href="#section-10">10. External Links</a></li>
+                <li><a href="#section-11">11. Policy Updates</a></li>
+                <li><a href="#section-12">12. Contact Information</a></li>
+            </ul>
+        </nav>
 
-      <aside class="hero-card" aria-label="Policy summary">
-        <div class="hero-card-label">Document Snapshot</div>
+        <main class="content-main">
+            <h1>GetGood Privacy Policy Overview</h1>
+            <p class="last-updated">
+                <strong>Effective Date:</strong> October 29, 2025
+            </p>
+            <p>
+                This Privacy Policy describes how GetGood ("the App," "We," "Us," or "Our"), developed by Yusuf Rana, collects, uses, and discloses your Personal Data when you use our fitness application. We are committed to protecting your privacy and ensuring you understand how your information is handled.
+            </p>
 
-        <div class="meta-row">
-          <div>
-            <div style="font-size:0.77rem; text-transform:uppercase; letter-spacing:0.12em; color:rgba(209,213,219,0.85); margin-bottom:0.3rem;">
-              Last Updated
+            <h2 id="section-1">1. Interpretation and Definitions</h2>
+            <p>
+                The following definitions apply to this Privacy Policy.
+            </p>
+            <ul>
+                <li><strong>Application (App):</strong> Refers to the GetGood mobile application.</li>
+                <li><strong>Company:</strong> Refers to GetGood by Yusuf Rana.</li>
+                <li><strong>Account:</strong> The unique profile created for You to access our App.</li>
+                <li><strong>Personal Data:</strong> Information relating to an identified or identifiable natural person.</li>
+                <li><strong>Usage Data:</strong> Data automatically collected, generated by the use of the App or from the App infrastructure itself.</li>
+                <li><strong>Device:</strong> Any device (e.g., phone, tablet) that can access the App.</li>
+                <li><strong>Service Providers:</strong> Third-party entities employed to facilitate the App's operation and services.</li>
+                <li><strong>You:</strong> The individual accessing or using the App.</li>
+            </ul>
+
+            <h2 id="section-2">2. Data Collection and Usage</h2>
+            <p>We collect two main types of data: Personal Data you provide directly and Usage Data collected automatically.</p>
+
+            <h3>2.1 Personal Data You Provide</h3>
+            <p>When using our App, we may require you to provide us with certain personally identifiable information, including:</p>
+            <ul>
+                <li><strong>Account & Authentication:</strong> Email address, secure authentication tokens (used for login).</li>
+                <li><strong>Profile Information:</strong> Display name, age range, specified fitness goals (optional).</li>
+                <li><strong>Fitness & Health Data:</strong> Manually logged workouts, progress metrics, and related activity data.</li>
+                <li><strong>Communication Records:</strong> Content of messages or support requests sent to us.</li>
+            </ul>
+
+            <h3>2.2 Automatically Collected Usage Data</h3>
+            <p>Usage Data is collected automatically when using the App. This may include:</p>
+            <ul>
+                <li>Your Device's Internet Protocol address (IP address).</li>
+                <li>Device type, operating system (OS), and unique device identifiers.</li>
+                <li>App interaction metrics (e.g., features used, frequency of use).</li>
+                <li>Diagnostic data, such as crash logs and performance reports.</li>
+                <li>Approximate geographic location derived from IP address (region-based, not precise GPS).</li>
+            </ul>
+
+            <h3>2.3 Payment Information</h3>
+            <p>All subscription and payment processing is handled exclusively by **third-party app-store billing systems** (e.g., Apple App Store, Google Play Store). **We do not collect, process, or store your payment card details.**</p>
+
+            <h2 id="section-3">3. How Your Personal Data is Used</h2>
+            <p>The Company may use Personal Data for the following purposes:</p>
+            <ul>
+                <li><strong>Service Provision:</strong> To operate, maintain, and provide the core features of the App.</li>
+                <li><strong>Account Management:</strong> To manage your Account, secure authentication, and enable access.</li>
+                <li><strong>Personalization:</strong> To provide personalized fitness recommendations and track progress.</li>
+                <li><strong>Communication:</strong> To send important administrative notices, updates, and support responses.</li>
+                <li><strong>Analysis & Improvement:</strong> To monitor the use of the App, perform analytics, and improve reliability and features.</li>
+                <li><strong>Legal Compliance:</strong> For purposes of enforcing our Terms and Conditions, preventing fraud, and meeting legal requirements.</li>
+            </ul>
+            <p><strong>Crucially: We do not sell your Personal Data to third parties for monetary compensation.</strong></p>
+
+            <h2 id="section-4">4. Retention of Your Personal Data</h2>
+            <p>We will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. This includes the duration of your active Account, compliance with legal obligations (e.g., tax, accounting), and resolving disputes.</p>
+            <p>Once data is no longer necessary, we will securely delete or anonymize it.</p>
+
+            <h2 id="section-5">5. Transfer of Your Personal Data</h2>
+            <p>Your information, including Personal Data, may be processed and maintained on computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction.</p>
+            <p>We implement safeguards to ensure your data is treated securely and in accordance with this Privacy Policy, utilizing measures such as **encryption**, **restricted access controls**, and **secure data protocols**.</p>
+
+            <h2 id="section-6">6. Your Data Protection Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li><strong>Access:</strong> Request copies of your Personal Data.</li>
+                <li><strong>Rectification:</strong> Request correction of inaccurate or incomplete data.</li>
+                <li><strong>Erasure (Deletion):</strong> Delete your Account and associated Personal Data.</li>
+            </ul>
+            <p>You may **delete your account at any time** using the dedicated “Delete Account” option within the App settings. All associated data will be permanently erased, subject only to a temporary retention of some transaction records for legal and financial compliance.</p>
+
+            <h2 id="section-7">7. Disclosure of Your Personal Data</h2>
+            <ul>
+                <li><strong>Business Transactions:</strong> In the event of a merger, acquisition, or asset sale, your Personal Data may be transferred. We will provide notice before your Personal Data is subject to a different Privacy Policy.</li>
+                <li><strong>Law Enforcement:</strong> Under certain circumstances, we may be required to disclose your Personal Data if legally compelled to do so by government authorities or court order.</li>
+                <li><strong>Service Providers:</strong> We may share data with Service Providers solely to monitor and analyze the use of our App, and for technical support.</li>
+            </ul>
+
+            <h2 id="section-8">8. Security of Your Personal Data</h2>
+            <p>The security of your Personal Data is critical to us. We strive to use commercially acceptable means to protect your Personal Data, including:</p>
+            <ul>
+                <li>End-to-end **Encryption** for data transfer (TLS/SSL).</li>
+                <li>Strong encryption mechanisms for data **storage at rest**.</li>
+                <li>**Restricted internal access** to data based on the principle of least privilege.</li>
+                <li>**Regular security audits** and vulnerability assessments.</li>
+            </ul>
+            <p>However, no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
+
+            <h2 id="section-9">9. Children’s Privacy</h2>
+            <p>The GetGood App is intended for users who are **9 years of age or older**. We do not knowingly collect or solicit personal information from children under the age of 9.</p>
+            <p>If we become aware that we have collected Personal Data from a child under 9 without verifiable parental consent, we will take immediate steps to remove that information from our servers.</p>
+
+            <h2 id="section-10">10. Links to Other Websites</h2>
+            <p>Our App may contain links to external websites that are not operated by Us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit, as we have no control over, and assume no responsibility for, the content or practices of any third-party sites or services.</p>
+
+            <h2 id="section-11">11. Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy within the App. You are advised to review this Privacy Policy periodically for any changes. Continued use of the App after the changes are posted constitutes your acceptance of the new terms.</p>
+
+            <h2 id="section-12">12. Contact Information</h2>
+            <div class="contact-info">
+                <p>For any questions or concerns regarding this Privacy Policy, your data rights, or the handling of your Personal Data, please contact us:</p>
+                <p><strong>By Email:</strong> <a href="mailto:support@getgoodapp.com" style="color: var(--color-link); font-weight: 600;">support@getgoodapp.com</a></p>
+                <p><strong>Attention:</strong> Privacy Officer</p>
             </div>
-            <div style="font-size:0.9rem; font-weight:500; color:#f9fafb;">October 29, 2025</div>
-          </div>
-          <div>
-            <span class="chip">
-              <span class="chip-dot"></span>
-              <span>Applies to all GetGood accounts</span>
-            </span>
-          </div>
-        </div>
 
-        <div style="font-size:0.8rem; color:var(--muted); line-height:1.6;">
-          This policy covers your account data, fitness and usage information, and how we handle
-          security, retention, deletion, and compliance.
-        </div>
+        </main>
+    </div>
 
-        <div class="hero-card-footer">
-          <div class="hero-mark">
-            <span class="hero-mark-icon">✓</span>
-            <span>Designed to align with modern privacy practices</span>
-          </div>
-          <div style="font-size:0.76rem; color:var(--muted);">
-            Contact: <span style="color:#e5e7eb;">support@getgoodapp.com</span>
-          </div>
-        </div>
-      </aside>
-    </section>
+    <footer>
+        &copy; 2025 GetGood by Yusuf Rana. All rights reserved. | Corporate Identity 1.0
+    </footer>
 
-    <!-- Main layout: TOC + Policy -->
-    <section class="content-layout">
-      <!-- Sidebar / TOC -->
-      <aside class="toc-card" aria-label="Privacy policy sections">
-        <div class="toc-title">Policy Structure</div>
-        <div class="toc-subtitle">Jump to a specific section:</div>
-        <ul class="toc-list">
-          <li class="toc-item"><a href="#section-1"><span>01.</span> Interpretations &amp; Definitions</a></li>
-          <li class="toc-item"><a href="#section-2"><span>02.</span> Collecting &amp; Using Your Personal Data</a></li>
-          <li class="toc-item"><a href="#section-3"><span>03.</span> Use of Your Personal Data</a></li>
-          <li class="toc-item"><a href="#section-4"><span>04.</span> Retention of Your Personal Data</a></li>
-          <li class="toc-item"><a href="#section-5"><span>05.</span> Transfer of Your Personal Data</a></li>
-          <li class="toc-item"><a href="#section-6"><span>06.</span> Delete Your Personal Data</a></li>
-          <li class="toc-item"><a href="#section-7"><span>07.</span> Disclosure of Your Personal Data</a></li>
-          <li class="toc-item"><a href="#section-8"><span>08.</span> Security of Your Personal Data</a></li>
-          <li class="toc-item"><a href="#section-9"><span>09.</span> Children’s Privacy</a></li>
-          <li class="toc-item"><a href="#section-10"><span>10.</span> Links to Other Websites</a></li>
-          <li class="toc-item"><a href="#section-11"><span>11.</span> Changes to This Privacy Policy</a></li>
-          <li class="toc-item"><a href="#section-12"><span>12.</span> Contact Us</a></li>
-        </ul>
-        <div class="toc-footer">
-          For any questions or data access requests, reach out to
-          <span>support@getgoodapp.com</span>.
-        </div>
-      </aside>
+    <script>
+        // Optional: Simple script to highlight the active link in the sticky sidebar
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.content-main h2');
+            const navLinks = document.querySelectorAll('.nav-sidebar a');
 
-      <!-- Policy content (TEXT KEPT IDENTICAL) -->
-      <article class="policy-card">
-        <div class="policy-top-meta">
-          <p><strong>Last Updated:</strong> October 29, 2025</p>
-          <div class="policy-top-badge">
-            <span class="policy-top-badge-dot"></span>
-            Current Version
-          </div>
-        </div>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Remove active class from all
+                        navLinks.forEach(link => link.classList.remove('active'));
+                        
+                        // Add active class to the corresponding link
+                        const id = entry.target.getAttribute('id');
+                        const activeLink = document.querySelector(`.nav-sidebar a[href="#${id}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                        }
+                    }
+                });
+            }, { 
+                rootMargin: "0px 0px -60% 0px", // Trigger when section is in the top 40% of the viewport
+                threshold: 0
+            });
 
-        <div class="policy-body">
-          <h2 id="section-1">1. Interpretations and Definitions</h2>
-          <p><strong>Interpretation</strong> Words with capitalized initials have specific meanings defined below. The same definitions apply whether they appear in singular or plural form.</p>
-          <p><strong>Definitions</strong></p>
-          <p>
-            Application (App): Refers to GetGood.<br>
-            Company (We, Us, Our): Refers to GetGood by Yusuf Rana.<br>
-            Account: A unique user profile created to access the App.<br>
-            Personal Data: Any identifiable information.<br>
-            Usage Data: Automatically collected analytics and performance information.<br>
-            Device: Any device capable of accessing the App.<br>
-            Service Providers: Third-party companies supporting the App.<br>
-            You: The individual using the App.
-          </p>
-
-          <div class="divider"></div>
-
-          <h2 id="section-2">2. Collecting and Using Your Personal Data</h2>
-          <h3 style="color: var(--accent-strong); margin-top: 1.5rem;">2.1 Types of Data Collected</h3>
-
-          <p><strong>Personal Data</strong> We may collect the following information:</p>
-          <ul>
-            <li><strong>Account Information</strong> – Email &amp; authentication data.</li>
-            <li><strong>Profile Details</strong> – Display name, age range, goals (optional).</li>
-            <li><strong>Fitness Data</strong> – Manually logged workouts &amp; progress.</li>
-            <li><strong>Communication Data</strong> – Messages or support requests.</li>
-          </ul>
-
-          <p><strong>Usage Data</strong> includes:</p>
-          <ul>
-            <li>Device type &amp; OS</li>
-            <li>Interaction metrics</li>
-            <li>Crash logs &amp; diagnostics</li>
-            <li>Approximate region-based location</li>
-          </ul>
-
-          <p><strong>Payment Data</strong> is handled entirely by app-store billing systems. We never store payment card details.</p>
-
-          <div class="divider"></div>
-
-          <h2 id="section-3">3. Use of Your Personal Data</h2>
-          <ul>
-            <li>Operate and improve App features.</li>
-            <li>Secure authentication &amp; account access.</li>
-            <li>Personalized fitness recommendations.</li>
-            <li>Administrative notifications.</li>
-            <li>Analytics &amp; reliability improvements.</li>
-            <li>Terms enforcement &amp; fraud protection.</li>
-          </ul>
-          <p><strong>We do not sell your Personal Data.</strong></p>
-
-          <div class="divider"></div>
-
-          <h2 id="section-4">4. Retention of Your Personal Data</h2>
-          <p>Your Personal Data is retained only as long as necessary for account functionality, legal compliance, and security. When no longer needed, it is deleted or anonymized.</p>
-
-          <div class="divider"></div>
-
-          <h2 id="section-5">5. Transfer of Your Personal Data</h2>
-          <p>Your data may be processed on servers outside your region. We protect your data using encryption, restricted access, and secure protocols.</p>
-
-          <div class="divider"></div>
-
-          <h2 id="section-6">6. Delete Your Personal Data</h2>
-          <p>You may delete your account anytime by using the “Delete Account” option inside the App. All associated data is permanently erased. Some transaction records may temporarily remain for legal compliance.</p>
-
-          <div class="divider"></div>
-
-          <h2 id="section-7">7. Disclosure of Your Personal Data</h2>
-          <p><strong>Business Transactions:</strong> Data may transfer during mergers or acquisitions.</p>
-          <p><strong>Law Enforcement:</strong> We may disclose data when legally required.</p>
-
-          <div class="divider"></div>
-
-          <h2 id="section-8">8. Security of Your Personal Data</h2>
-          <ul>
-            <li>Encryption during transfer &amp; storage</li>
-            <li>Restricted internal access</li>
-            <li>Regular security reviews</li>
-          </ul>
-
-          <div class="divider"></div>
-
-          <h2 id="section-9">9. Children’s Privacy</h2>
-          <p>GetGood is intended for users who are <strong>9 years of age or older</strong>.
-            We do not knowingly collect personal information from children under 9. 
-            If we discover that information from a user younger than 9 has been submitted, 
-            we will take steps to delete it promptly.</p>
-
-          <div class="divider"></div>
-
-          <h2 id="section-10">10. Links to Other Websites</h2>
-          <p>External links within the App are not under our control. Users should review third-party privacy policies.</p>
-
-          <div class="divider"></div>
-
-          <h2 id="section-11">11. Changes to This Privacy Policy</h2>
-          <p>Updates will be posted within the App. Continued use after changes indicates acceptance.</p>
-
-          <div class="divider"></div>
-
-          <h2 id="section-12">12. Contact Us</h2>
-          <p>For privacy questions or data requests, contact: <strong>support@getgoodapp.com</strong></p>
-        </div>
-      </article>
-    </section>
-  </div>
-
-  <footer>
-    <span>© 2025 GetGood by Yusuf Rana — All rights reserved.</span>
-    <span class="footer-right">Part of the <strong>GetGood</strong> digital products ecosystem.</span>
-  </footer>
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
